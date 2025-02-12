@@ -123,7 +123,7 @@ body {
 
 /* Hamburger Menu */
 .hamburger-btn {
-    display: none;
+    display: none;  /* Hide by default on desktop */
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(200, 200, 200, 0.2);
@@ -169,8 +169,8 @@ body {
 
 @media (max-width: 768px) {
     .hamburger-btn {
-        display: flex;
-        margin-right: -35px;  /* Increased from -25px */
+        display: flex;  /* Show on mobile */
+        margin-right: -35px;
         background: rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(10px);
         border: 1px solid rgba(200, 200, 200, 0.2);
@@ -186,7 +186,7 @@ body {
 
 /* Mobile Menu */
 .mobile-menu {
-    display: none;  /* Hide by default */
+    display: none;  /* Hide by default on desktop */
     position: fixed;
     top: 0;
     right: -100%;
@@ -233,10 +233,6 @@ body {
 }
 
 @media (max-width: 768px) {
-    .hamburger-btn {
-        display: block;
-    }
-
     .nav-links {
         display: none;  /* Hide desktop nav on mobile */
     }
