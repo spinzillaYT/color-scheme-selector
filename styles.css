@@ -66,7 +66,8 @@ body {
 }
 
 .logo-icon {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    margin-right: 0.5rem;
     font-family: var(--emoji-font);
 }
 
@@ -181,29 +182,26 @@ body {
     transition: all 0.2s ease;
 }
 
+.feature-icon {
+    font-size: 1.4rem;
+    display: inline-block;
+    margin-right: 0.75rem;
+    vertical-align: middle;
+    font-family: var(--emoji-font);
+}
+
 .feature-item:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     border-color: rgba(229, 231, 235, 0.8);
 }
 
-.feature-icon {
-    font-size: 1.25rem;
-    opacity: 0.7;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 0.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    font-family: var(--emoji-font);
-}
-
 .hero-icon {
-    font-size: 3.5rem;
-    opacity: 0.9;
-    vertical-align: middle;
-    margin-right: 0.75rem;
+    font-size: 2.8rem;
     display: inline-block;
-    transform: translateY(-4px);
+    margin-right: 1rem;
+    vertical-align: middle;
+    font-family: var(--emoji-font);
 }
 
 .accent-text {
@@ -228,6 +226,13 @@ body {
     box-shadow: 0 2px 4px rgba(229, 160, 95, 0.15);
 }
 
+.btn-icon {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+    font-family: var(--emoji-font);
+}
+
 .find-color-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(229, 160, 95, 0.2);
@@ -236,11 +241,6 @@ body {
 
 .find-color-btn:active {
     transform: translateY(0);
-}
-
-.btn-icon {
-    font-size: 1.2rem;
-    font-family: var(--emoji-font);
 }
 
 /* Mobile Responsive */
@@ -364,12 +364,16 @@ header p {
     gap: 0.75rem;
     width: 100%;
     height: 70px;
+    appearance: none;
+    -webkit-appearance: none;
+    color: var(--text-color) !important;
     text-decoration: none !important;
+    -webkit-text-decoration: none !important;
     -webkit-tap-highlight-color: transparent;
 }
 
 .niche-icon {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     line-height: 1;
     flex-shrink: 0;
     font-family: var(--emoji-font);
@@ -379,16 +383,31 @@ header p {
     font-size: 1rem;
     text-align: left;
     color: var(--text-color) !important;
+    text-decoration: none !important;
+    -webkit-text-decoration: none !important;
 }
 
 @media (max-width: 768px) {
-    .niche-button, .niche-text {
+    .niche-button, 
+    .niche-text,
+    .niche-button *,
+    .niche-text * {
         color: var(--text-color) !important;
-        -webkit-text-fill-color: var(--text-color);
+        text-decoration: none !important;
+        -webkit-text-decoration: none !important;
+        -webkit-tap-highlight-color: transparent;
     }
     
-    .niche-button:active {
-        color: var(--text-color) !important;
+    .niche-button {
+        appearance: none;
+        -webkit-appearance: none;
+        color: var(--text-color);
+    }
+    
+    .niche-text {
+        color: var(--text-color);
+        text-decoration: none;
+        -webkit-text-decoration: none;
     }
 }
 
