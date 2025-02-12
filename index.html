@@ -10,21 +10,36 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/adobe-fonts.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="container nav-container">
-            <div class="logo">
-                <span class="logo-icon">🎨️</span>
-                <span class="logo-text">PaletteFinder</span>
-            </div>
-            <div class="nav-links">
+            <a href="#" class="logo" onclick="scrollToTop(); return false;">
+                <img src="./SVG/LOGO PC.svg" alt="PaletteFinder Logo" class="logo-svg desktop-logo">
+                <img src="./SVG/LOGO MOB.svg" alt="PaletteFinder Logo" class="logo-svg mobile-logo">
+            </a>
+            <div class="nav-links desktop-nav">
                 <a href="#" class="active">Home</a>
                 <a href="#">Features</a>
                 <a href="#">Demo</a>
                 <a href="#">Pricing</a>
-                <a href="#">FAQ</a>
+                <a href="#faq" onclick="scrollToSection('faq')">FAQ</a>
+            </div>
+            <button class="hamburger-btn" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="mobile-menu">
+                <nav class="mobile-nav">
+                    <a href="#" class="active">Home</a>
+                    <a href="#">Features</a>
+                    <a href="#">Demo</a>
+                    <a href="#">Pricing</a>
+                    <a href="#faq" onclick="scrollToSection('faq'); toggleMenu();">FAQ</a>
+                </nav>
             </div>
         </div>
     </nav>
@@ -33,18 +48,16 @@
         <div class="grid-background"></div>
         <div class="container">
             <div class="update-banner">
-                ⭐️ New: More color schemes and improved accessibility!
+                New: More color schemes and improved accessibility!
             </div>
             <h1>
-                <span class="hero-icon">🎨️</span>
+                <span class="hero-icon">🎨</span>
                 Perfect Your Brand with
                 <span class="accent-text">Colors.</span>
             </h1>
-            <p class="hero-description">
-                Find the perfect color scheme for your brand. Choose from curated combinations and save time on design decisions.
-            </p>
+            <p class="hero-subtext">Discover the perfect color scheme for your brand in seconds.</p>
             <button class="find-color-btn">
-                <span class="btn-icon">⭐️</span>
+                <span class="btn-icon">🚀</span>
                 Find My Color!
             </button>
             <div class="hero-features">
@@ -53,15 +66,15 @@
                     Quick color combinations for your niche
                 </div>
                 <div class="feature-item">
-                    <span class="feature-icon">🎨️</span>
+                    <span class="feature-icon">🎨</span>
                     Modern design trends and psychology
                 </div>
                 <div class="feature-item">
-                    <span class="feature-icon">📊️</span>
+                    <span class="feature-icon">📊</span>
                     Side-by-side scheme comparison
                 </div>
                 <div class="feature-item">
-                    <span class="feature-icon">📱️</span>
+                    <span class="feature-icon">📱</span>
                     Accessibility-tested combinations
                 </div>
             </div>
@@ -79,7 +92,7 @@
             <div class="color-swatches" id="colorSwatches"></div>
         </section>
 
-        <section class="faq-section">
+        <section id="faq" class="faq-section">
             <div class="faq-header">
                 <span class="faq-label">Frequently Asked Questions</span>
                 <h2>Everything that you need to know.</h2>
