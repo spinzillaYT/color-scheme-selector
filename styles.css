@@ -961,3 +961,12 @@ header p {
         padding: 1.25rem;
     }
 }
+
+/* Emoji styles */
+.hero-icon,
+.feature-icon,
+.btn-icon {
+    font-family: var(--emoji-font);
+    display: inline-block;
+    vertical-align: middle;
+}
