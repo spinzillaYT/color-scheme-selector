@@ -13,17 +13,17 @@ const niches = [
     { name: 'Technology', icon: '💻' },
     { name: 'Entertainment', icon: '🎬' },
     { name: 'Fashion', icon: '👗' },
-    { name: 'Beauty', icon: '💄' },
     { name: 'Sports', icon: '⚽' },
     { name: 'Music', icon: '🎵' },
     { name: 'Art & Design', icon: '🎨' },
     { name: 'Finance', icon: '💰' },
     { name: 'Automotive', icon: '🚗' },
     { name: 'Web3', icon: '🌐' },
-    { name: 'Personal Blog', icon: '📝' },
     { name: 'News', icon: '📰' },
     { name: 'Gaming', icon: '🎮' },
     { name: 'Pet Services', icon: '🐾' },
+    { name: 'Personal Blog', icon: '📝' },
+    { name: 'Beauty', icon: '💄' },
     { name: 'Wedding', icon: '💒' },
     { name: 'Events', icon: '🎪' }
 ];
@@ -145,7 +145,7 @@ const colorSchemes = {
         {
             name: "Digital Wave",
             description: "Modern and tech-forward for digital art portfolios",
-            colors: ["#1A1A2E", "#16213E", "#0F3460", "#E94560"]
+            colors: ["#1A1A1A", "#333333", "#00BCD4", "#FFFFFF"]
         },
         {
             name: "Artistic Soul",
@@ -428,7 +428,7 @@ const colorSchemes = {
         {
             name: "Clean SaaS",
             description: "Professional and trustworthy palette for SaaS platforms",
-            colors: ["#00796B", "#26A69A", "#B2DFDB", "#E0F2F1"]
+            colors: ["#007BFF", "#26A69A", "#B2DFDB", "#E0F2F1"]
         },
         {
             name: "AI Modern",
@@ -1233,7 +1233,7 @@ const colorSchemes = {
         {
             name: "Fine Art",
             description: "Sophisticated and artistic for fine art photography",
-            colors: ["#1A237E", "#3949AB", "#C5CAE9", "#FFFFFF"]
+            colors: ["#1A237E", "#7C4DFF", "#B388FF", "#FFFFFF"]
         },
         {
             name: "Event Capture",
@@ -1438,17 +1438,17 @@ const colorSchemes = {
         },
         {
             name: "Gaming Tech",
-            description: "Dynamic and exciting for gaming companies",
+            description: "Energetic and bold for gaming companies",
             colors: ["#311B92", "#5E35B1", "#D1C4E9", "#FFFFFF"]
         },
         {
             name: "IoT Platform",
-            description: "Connected and smart for IoT solutions",
+            description: "Connected and innovative for IoT solutions",
             colors: ["#004D40", "#00796B", "#B2DFDB", "#FFFFFF"]
         },
         {
             name: "Data Analytics",
-            description: "Precise and insightful for data companies",
+            description: "Precise and modern for data companies",
             colors: ["#0D47A1", "#1976D2", "#BBDEFB", "#FFFFFF"]
         },
         {
@@ -1645,9 +1645,702 @@ const colorSchemes = {
             description: "Premium and exclusive for luxury brands",
             colors: ["#1A237E", "#3949AB", "#C5CAE9", "#FFFFFF"]
         }
+    ],
+    'Automotive': [
+        {
+            name: "Performance Red",
+            description: "Bold and energetic for sports cars and performance vehicles",
+            colors: ["#FF1E1E", "#1A1A1A", "#D9D9D9", "#FFFFFF"]
+        },
+        {
+            name: "Luxury Executive",
+            description: "Sophisticated and premium for luxury vehicles",
+            colors: ["#1A1A1A", "#C0C0C0", "#E5E5E5", "#FFFFFF"]
+        },
+        {
+            name: "Electric Future",
+            description: "Modern and eco-friendly for electric vehicles",
+            colors: ["#00BFA5", "#263238", "#ECEFF1", "#B2DFDB"]
+        },
+        {
+            name: "Classic Heritage",
+            description: "Timeless and traditional for vintage automobiles",
+            colors: ["#8B4513", "#D4AF37", "#E8E3D9", "#2C2C2C"]
+        },
+        {
+            name: "Industrial Power",
+            description: "Strong and reliable for trucks and industrial vehicles",
+            colors: ["#37474F", "#546E7A", "#CFD8DC", "#ECEFF1"]
+        },
+        {
+            name: "Racing Spirit",
+            description: "Dynamic and competitive for motorsports",
+            colors: ["#F44336", "#212121", "#FFC107", "#FFFFFF"]
+        },
+        {
+            name: "German Engineering",
+            description: "Precise and sophisticated for German automotive brands",
+            colors: ["#102027", "#37474F", "#B0BEC5", "#FFFFFF"]
+        },
+        {
+            name: "Italian Passion",
+            description: "Passionate and exotic for Italian sports cars",
+            colors: ["#D32F2F", "#212121", "#FFD700", "#FFFFFF"]
+        },
+        {
+            name: "British Elegance",
+            description: "Refined and prestigious for British luxury cars",
+            colors: ["#1B5E20", "#212121", "#D4AF37", "#FFFFFF"]
+        },
+        {
+            name: "Japanese Precision",
+            description: "Clean and efficient for Japanese manufacturers",
+            colors: ["#263238", "#455A64", "#CFD8DC", "#FFFFFF"]
+        },
+        {
+            name: "American Muscle",
+            description: "Bold and powerful for muscle cars",
+            colors: ["#B71C1C", "#212121", "#FFC107", "#FFFFFF"]
+        },
+        {
+            name: "Swedish Innovation",
+            description: "Clean and safe for Scandinavian vehicles",
+            colors: ["#006064", "#0097A7", "#B2EBF2", "#FFFFFF"]
+        },
+        {
+            name: "Off-Road Adventure",
+            description: "Rugged and capable for 4x4 vehicles",
+            colors: ["#33691E", "#558B2F", "#C5E1A5", "#F1F8E9"]
+        },
+        {
+            name: "Future Mobility",
+            description: "Forward-thinking for autonomous vehicles",
+            colors: ["#311B92", "#5E35B1", "#D1C4E9", "#FFFFFF"]
+        },
+        {
+            name: "Custom Garage",
+            description: "Creative and unique for custom builds",
+            colors: ["#3E2723", "#5D4037", "#D7CCC8", "#FFFFFF"]
+        }
+    ],
+    'Web3': [
+        {
+            name: "Crypto Future",
+            description: "Modern and tech-forward for blockchain projects",
+            colors: ["#7B1FA2", "#9C27B0", "#E1BEE7", "#FFFFFF"]
+        },
+        {
+            name: "Digital Asset",
+            description: "Bold and trustworthy for cryptocurrency platforms",
+            colors: ["#1A237E", "#3949AB", "#C5CAE9", "#E8EAF6"]
+        },
+        {
+            name: "Metaverse",
+            description: "Vibrant and futuristic for virtual worlds",
+            colors: ["#6200EA", "#651FFF", "#B388FF", "#FFFFFF"]
+        },
+        {
+            name: "DeFi Protocol",
+            description: "Professional and secure for decentralized finance",
+            colors: ["#004D40", "#00695C", "#B2DFDB", "#E0F2F1"]
+        },
+        {
+            name: "NFT Gallery",
+            description: "Creative and digital for NFT marketplaces",
+            colors: ["#311B92", "#5E35B1", "#D1C4E9", "#FFFFFF"]
+        },
+        {
+            name: "Blockchain Core",
+            description: "Reliable and technical for blockchain infrastructure",
+            colors: ["#263238", "#37474F", "#B0BEC5", "#FFFFFF"]
+        },
+        {
+            name: "DAO Community",
+            description: "Collaborative and inclusive for decentralized organizations",
+            colors: ["#0D47A1", "#1976D2", "#BBDEFB", "#FFFFFF"]
+        },
+        {
+            name: "Smart Contract",
+            description: "Precise and trustworthy for smart contract platforms",
+            colors: ["#1B5E20", "#2E7D32", "#C8E6C9", "#FFFFFF"]
+        },
+        {
+            name: "Web3 Social",
+            description: "Connected and engaging for decentralized social platforms",
+            colors: ["#4A148C", "#6A1B9A", "#E1BEE7", "#FFFFFF"]
+        },
+        {
+            name: "Crypto Exchange",
+            description: "Professional and secure for trading platforms",
+            colors: ["#01579B", "#0277BD", "#B3E5FC", "#FFFFFF"]
+        },
+        {
+            name: "Gaming Token",
+            description: "Playful and energetic for gaming cryptocurrencies",
+            colors: ["#D50000", "#FF1744", "#FF8A80", "#FFFFFF"]
+        },
+        {
+            name: "Privacy Chain",
+            description: "Secure and discreet for privacy-focused blockchains",
+            colors: ["#212121", "#424242", "#BDBDBD", "#FFFFFF"]
+        },
+        {
+            name: "Token Launch",
+            description: "Exciting and trustworthy for new token launches",
+            colors: ["#BF360C", "#D84315", "#FFCCBC", "#FFFFFF"]
+        },
+        {
+            name: "Crypto Wallet",
+            description: "Secure and user-friendly for digital wallets",
+            colors: ["#006064", "#0097A7", "#B2EBF2", "#FFFFFF"]
+        },
+        {
+            name: "Web3 Analytics",
+            description: "Data-focused and insightful for blockchain analytics",
+            colors: ["#1A237E", "#283593", "#C5CAE9", "#FFFFFF"]
+        }
+    ],
+    'News': [
+        {
+            name: "Breaking News",
+            description: "Bold and authoritative for headline news",
+            colors: ["#B71C1C", "#D32F2F", "#FFCDD2", "#FFFFFF"]
+        },
+        {
+            name: "Digital Press",
+            description: "Professional and readable for online news",
+            colors: ["#1A237E", "#283593", "#C5CAE9", "#FFFFFF"]
+        },
+        {
+            name: "Media Network",
+            description: "Modern and trustworthy for media organizations",
+            colors: ["#01579B", "#0277BD", "#B3E5FC", "#E1F5FE"]
+        },
+        {
+            name: "Editorial",
+            description: "Sophisticated and clean for in-depth journalism",
+            colors: ["#212121", "#424242", "#E0E0E0", "#FFFFFF"]
+        },
+        {
+            name: "Live Updates",
+            description: "Dynamic and engaging for breaking news",
+            colors: ["#BF360C", "#D84315", "#FFCCBC", "#FBE9E7"]
+        },
+        {
+            name: "Business News",
+            description: "Professional and reliable for financial news",
+            colors: ["#004D40", "#00796B", "#B2DFDB", "#E0F2F1"]
+        },
+        {
+            name: "Tech Coverage",
+            description: "Modern and sharp for technology news",
+            colors: ["#311B92", "#512DA8", "#D1C4E9", "#FFFFFF"]
+        },
+        {
+            name: "Sports News",
+            description: "Energetic and dynamic for sports coverage",
+            colors: ["#1B5E20", "#2E7D32", "#C8E6C9", "#FFFFFF"]
+        },
+        {
+            name: "Entertainment News",
+            description: "Vibrant and engaging for entertainment coverage",
+            colors: ["#880E4F", "#AD1457", "#F8BBD0", "#FFFFFF"]
+        },
+        {
+            name: "World News",
+            description: "Global and authoritative for international coverage",
+            colors: ["#0D47A1", "#1976D2", "#BBDEFB", "#FFFFFF"]
+        },
+        {
+            name: "Politics Hub",
+            description: "Balanced and professional for political news",
+            colors: ["#37474F", "#546E7A", "#CFD8DC", "#FFFFFF"]
+        },
+        {
+            name: "Science Section",
+            description: "Clean and precise for scientific news",
+            colors: ["#006064", "#0097A7", "#B2EBF2", "#FFFFFF"]
+        },
+        {
+            name: "Weather Updates",
+            description: "Clear and informative for weather news",
+            colors: ["#1565C0", "#1E88E5", "#BBDEFB", "#FFFFFF"]
+        },
+        {
+            name: "Culture News",
+            description: "Rich and elegant for arts and culture coverage",
+            colors: ["#4A148C", "#6A1B9A", "#E1BEE7", "#FFFFFF"]
+        },
+        {
+            name: "Local News",
+            description: "Approachable and trustworthy for community news",
+            colors: ["#2E7D32", "#388E3C", "#C8E6C9", "#FFFFFF"]
+        }
+    ],
+    'Gaming': [
+        {
+            name: "Neon Arcade",
+            description: "Vibrant and energetic for retro gaming",
+            colors: ["#1A1A1A", "#00FF00", "#FF00FF", "#FFFFFF"]
+        },
+        {
+            name: "Console Classic",
+            description: "Bold and nostalgic for gaming communities",
+            colors: ["#311B92", "#6200EA", "#B388FF", "#FFFFFF"]
+        },
+        {
+            name: "Esports Arena",
+            description: "Dynamic and competitive for esports platforms",
+            colors: ["#1A1A1A", "#FF4081", "#00BFA5", "#FFFFFF"]
+        },
+        {
+            name: "Stream Setup",
+            description: "Dark and focused for streaming platforms",
+            colors: ["#212121", "#9C27B0", "#69F0AE", "#FFFFFF"]
+        },
+        {
+            name: "RPG World",
+            description: "Mystical and immersive for role-playing games",
+            colors: ["#1A237E", "#7C4DFF", "#B388FF", "#FFFFFF"]
+        },
+        {
+            name: "Battle Royale",
+            description: "Intense and energetic for competitive gaming",
+            colors: ["#D32F2F", "#FF1744", "#FF8A80", "#FFFFFF"]
+        },
+        {
+            name: "Pixel Art",
+            description: "Retro-inspired for indie games",
+            colors: ["#006064", "#00BCD4", "#84FFFF", "#FFFFFF"]
+        },
+        {
+            name: "Fantasy Quest",
+            description: "Magical and adventurous for fantasy games",
+            colors: ["#4A148C", "#7B1FA2", "#E1BEE7", "#FFFFFF"]
+        },
+        {
+            name: "Sci-Fi Future",
+            description: "Futuristic and sleek for sci-fi games",
+            colors: ["#263238", "#01579B", "#80D8FF", "#FFFFFF"]
+        },
+        {
+            name: "Racing Thrill",
+            description: "Fast and dynamic for racing games",
+            colors: ["#BF360C", "#FF3D00", "#FF9E80", "#FFFFFF"]
+        },
+        {
+            name: "Strategy Command",
+            description: "Professional and tactical for strategy games",
+            colors: ["#004D40", "#00695C", "#B2DFDB", "#FFFFFF"]
+        },
+        {
+            name: "Horror Gaming",
+            description: "Dark and atmospheric for horror games",
+            colors: ["#1A1A1A", "#B71C1C", "#FF8A80", "#FFFFFF"]
+        },
+        {
+            name: "Mobile Gaming",
+            description: "Bright and accessible for mobile games",
+            colors: ["#0D47A1", "#2196F3", "#BBDEFB", "#FFFFFF"]
+        },
+        {
+            name: "Sandbox World",
+            description: "Creative and playful for sandbox games",
+            colors: ["#2E7D32", "#43A047", "#A5D6A7", "#FFFFFF"]
+        },
+        {
+            name: "Fighting Arena",
+            description: "Bold and intense for fighting games",
+            colors: ["#880E4F", "#E91E63", "#F8BBD0", "#FFFFFF"]
+        }
+    ],
+    'Pet Services': [
+        {
+            name: "Playful Paws",
+            description: "Fun and friendly for pet care services",
+            colors: ["#00796B", "#26A69A", "#B2DFDB", "#E0F2F1"]
+        },
+        {
+            name: "Gentle Care",
+            description: "Soft and nurturing for veterinary services",
+            colors: ["#558B2F", "#7CB342", "#DCEDC8", "#F1F8E9"]
+        },
+        {
+            name: "Happy Tails",
+            description: "Cheerful and welcoming for pet grooming",
+            colors: ["#EF6C00", "#FB8C00", "#FFE0B2", "#FFF3E0"]
+        },
+        {
+            name: "Pet Boutique",
+            description: "Stylish and premium for pet products",
+            colors: ["#4E342E", "#6D4C41", "#D7CCC8", "#EFEBE9"]
+        },
+        {
+            name: "Animal Haven",
+            description: "Calming and trustworthy for animal shelters",
+            colors: ["#2E7D32", "#388E3C", "#C8E6C9", "#E8F5E9"]
+        },
+        {
+            name: "Puppy Paradise",
+            description: "Energetic and playful for dog daycare",
+            colors: ["#1E88E5", "#42A5F5", "#BBDEFB", "#FFFFFF"]
+        },
+        {
+            name: "Cat Corner",
+            description: "Elegant and cozy for cat-specific services",
+            colors: ["#6A1B9A", "#8E24AA", "#E1BEE7", "#FFFFFF"]
+        },
+        {
+            name: "Pet Hospital",
+            description: "Professional and reassuring for medical care",
+            colors: ["#0277BD", "#039BE5", "#B3E5FC", "#FFFFFF"]
+        },
+        {
+            name: "Training Academy",
+            description: "Structured and encouraging for pet training",
+            colors: ["#1565C0", "#1976D2", "#BBDEFB", "#FFFFFF"]
+        },
+        {
+            name: "Exotic Care",
+            description: "Unique and specialized for exotic pet services",
+            colors: ["#AD1457", "#D81B60", "#F8BBD0", "#FFFFFF"]
+        },
+        {
+            name: "Pet Spa",
+            description: "Luxurious and relaxing for premium grooming",
+            colors: ["#00695C", "#00897B", "#B2DFDB", "#FFFFFF"]
+        },
+        {
+            name: "Animal Rescue",
+            description: "Compassionate and hopeful for rescue services",
+            colors: ["#689F38", "#7CB342", "#DCEDC8", "#FFFFFF"]
+        },
+        {
+            name: "Pet Store",
+            description: "Bright and inviting for retail spaces",
+            colors: ["#F57C00", "#FB8C00", "#FFE0B2", "#FFFFFF"]
+        },
+        {
+            name: "Aquatic Care",
+            description: "Serene and professional for aquatic pet services",
+            colors: ["#0097A7", "#00ACC1", "#B2EBF2", "#FFFFFF"]
+        },
+        {
+            name: "Mobile Grooming",
+            description: "Fresh and convenient for mobile services",
+            colors: ["#00838F", "#0097A7", "#B2EBF2", "#FFFFFF"]
+        }
+    ],
+    'Wedding': [
+        {
+            name: "Classic Romance",
+            description: "Timeless and elegant for traditional weddings",
+            colors: ["#B71C1C", "#D32F2F", "#FFCDD2", "#FFFFFF"]
+        },
+        {
+            name: "Garden Party",
+            description: "Fresh and natural for outdoor ceremonies",
+            colors: ["#388E3C", "#4CAF50", "#C8E6C9", "#FFFFFF"]
+        },
+        {
+            name: "Modern Love",
+            description: "Contemporary and minimalist for modern weddings",
+            colors: ["#212121", "#424242", "#E0E0E0", "#FFFFFF"]
+        },
+        {
+            name: "Beach Wedding",
+            description: "Coastal and breezy for beach ceremonies",
+            colors: ["#0288D1", "#03A9F4", "#B3E5FC", "#FFFFFF"]
+        },
+        {
+            name: "Vintage Charm",
+            description: "Nostalgic and romantic for vintage themes",
+            colors: ["#4E342E", "#6D4C41", "#D7CCC8", "#FFFFFF"]
+        },
+        {
+            name: "Royal Affair",
+            description: "Luxurious and regal for upscale weddings",
+            colors: ["#4A148C", "#6A1B9A", "#E1BEE7", "#FFFFFF"]
+        },
+        {
+            name: "Rustic Love",
+            description: "Warm and natural for rustic celebrations",
+            colors: ["#5D4037", "#795548", "#D7CCC8", "#FFFFFF"]
+        },
+        {
+            name: "Spring Romance",
+            description: "Light and fresh for spring weddings",
+            colors: ["#C2185B", "#E91E63", "#F8BBD0", "#FFFFFF"]
+        },
+        {
+            name: "Winter Wonder",
+            description: "Cool and elegant for winter weddings",
+            colors: ["#1565C0", "#1976D2", "#BBDEFB", "#FFFFFF"]
+        },
+        {
+            name: "Autumn Love",
+            description: "Rich and warm for fall ceremonies",
+            colors: ["#E65100", "#F57C00", "#FFE0B2", "#FFFFFF"]
+        },
+        {
+            name: "Sunset Ceremony",
+            description: "Warm and romantic for evening events",
+            colors: ["#D84315", "#F4511E", "#FFCCBC", "#FFFFFF"]
+        },
+        {
+            name: "Enchanted Forest",
+            description: "Magical and natural for woodland weddings",
+            colors: ["#1B5E20", "#2E7D32", "#C8E6C9", "#FFFFFF"]
+        },
+        {
+            name: "Urban Chic",
+            description: "Sophisticated and sleek for city weddings",
+            colors: ["#263238", "#37474F", "#CFD8DC", "#FFFFFF"]
+        },
+        {
+            name: "Desert Romance",
+            description: "Earthy and warm for desert ceremonies",
+            colors: ["#BF360C", "#D84315", "#FFCCBC", "#FFFFFF"]
+        },
+        {
+            name: "Fairytale Dream",
+            description: "Soft and dreamy for fairytale themes",
+            colors: ["#880E4F", "#AD1457", "#F8BBD0", "#FFFFFF"]
+        }
+    ],
+    'Personal Blog': [
+        {
+            name: "Cozy Reading",
+            description: "Warm and inviting for personal stories",
+            colors: ["#795548", "#A1887F", "#D7CCC8", "#EFEBE9"]
+        },
+        {
+            name: "Modern Writer",
+            description: "Clean and minimal for focused reading",
+            colors: ["#212121", "#757575", "#EEEEEE", "#FFFFFF"]
+        },
+        {
+            name: "Creative Journal",
+            description: "Artistic and expressive for creative writing",
+            colors: ["#AD1457", "#D81B60", "#F8BBD0", "#FFFFFF"]
+        },
+        {
+            name: "Life Stories",
+            description: "Soft and personal for lifestyle blogging",
+            colors: ["#5D4037", "#8D6E63", "#D7CCC8", "#EFEBE9"]
+        },
+        {
+            name: "Digital Diary",
+            description: "Contemporary and clean for modern blogging",
+            colors: ["#006064", "#0097A7", "#B2EBF2", "#E0F7FA"]
+        },
+        {
+            name: "Travel Tales",
+            description: "Adventure-inspired for travel blogging",
+            colors: ["#00695C", "#00897B", "#B2DFDB", "#E0F2F1"]
+        },
+        {
+            name: "Food Stories",
+            description: "Appetizing and warm for culinary blogs",
+            colors: ["#D84315", "#F4511E", "#FFE0B2", "#FFFFFF"]
+        },
+        {
+            name: "Mindful Space",
+            description: "Calming palette for wellness blogs",
+            colors: ["#558B2F", "#7CB342", "#DCEDC8", "#F1F8E9"]
+        },
+        {
+            name: "Photo Journal",
+            description: "Visual-focused for photography blogs",
+            colors: ["#37474F", "#546E7A", "#CFD8DC", "#FFFFFF"]
+        },
+        {
+            name: "Poetry Corner",
+            description: "Elegant and emotive for poetry blogs",
+            colors: ["#4A148C", "#6A1B9A", "#E1BEE7", "#FFFFFF"]
+        },
+        {
+            name: "Tech Notes",
+            description: "Sharp and clean for technology writing",
+            colors: ["#1A237E", "#283593", "#C5CAE9", "#FFFFFF"]
+        },
+        {
+            name: "Fashion Diary",
+            description: "Stylish and trendy for fashion blogging",
+            colors: ["#880E4F", "#AD1457", "#F8BBD0", "#FFFFFF"]
+        },
+        {
+            name: "Parent Stories",
+            description: "Friendly and warm for parenting blogs",
+            colors: ["#EF6C00", "#F57C00", "#FFE0B2", "#FFF3E0"]
+        },
+        {
+            name: "Book Reviews",
+            description: "Classic and readable for literary blogs",
+            colors: ["#3E2723", "#5D4037", "#D7CCC8", "#FFFFFF"]
+        },
+        {
+            name: "Art Blog",
+            description: "Creative and inspiring for art blogs",
+            colors: ["#311B92", "#512DA8", "#D1C4E9", "#FFFFFF"]
+        }
+    ],
+    'Beauty': [
+        {
+            name: "Elegant Spa",
+            description: "Luxurious and calming for spa services",
+            colors: ["#6A1B9A", "#8E24AA", "#E1BEE7", "#FFFFFF"]
+        },
+        {
+            name: "Modern Salon",
+            description: "Chic and sophisticated for hair salons",
+            colors: ["#880E4F", "#AD1457", "#F8BBD0", "#FFFFFF"]
+        },
+        {
+            name: "Natural Glow",
+            description: "Organic and fresh for natural beauty",
+            colors: ["#558B2F", "#689F38", "#DCEDC8", "#F1F8E9"]
+        },
+        {
+            name: "Makeup Studio",
+            description: "Glamorous and bold for makeup artists",
+            colors: ["#4A148C", "#6A1B9A", "#E1BEE7", "#FFFFFF"]
+        },
+        {
+            name: "Skincare Haven",
+            description: "Clean and pure for skincare services",
+            colors: ["#00695C", "#00897B", "#B2DFDB", "#FFFFFF"]
+        },
+        {
+            name: "Nail Boutique",
+            description: "Stylish and trendy for nail services",
+            colors: ["#C2185B", "#E91E63", "#F8BBD0", "#FFFFFF"]
+        },
+        {
+            name: "Wellness Center",
+            description: "Balanced and serene for holistic beauty",
+            colors: ["#00796B", "#26A69A", "#B2DFDB", "#E0F2F1"]
+        },
+        {
+            name: "Beauty Tech",
+            description: "Modern and innovative for beauty tech",
+            colors: ["#1565C0", "#1976D2", "#BBDEFB", "#FFFFFF"]
+        },
+        {
+            name: "Luxury Beauty",
+            description: "Premium and exclusive for high-end services",
+            colors: ["#3E2723", "#5D4037", "#D7CCC8", "#FFFFFF"]
+        },
+        {
+            name: "Cosmetic Clinic",
+            description: "Professional and clinical for medical beauty",
+            colors: ["#0277BD", "#039BE5", "#B3E5FC", "#FFFFFF"]
+        },
+        {
+            name: "Organic Beauty",
+            description: "Natural and eco-friendly for organic products",
+            colors: ["#2E7D32", "#388E3C", "#C8E6C9", "#FFFFFF"]
+        },
+        {
+            name: "Beauty Bar",
+            description: "Fun and social for beauty bars",
+            colors: ["#D81B60", "#EC407A", "#F8BBD0", "#FFFFFF"]
+        },
+        {
+            name: "Lash Studio",
+            description: "Delicate and feminine for lash services",
+            colors: ["#AD1457", "#D81B60", "#F8BBD0", "#FFFFFF"]
+        },
+        {
+            name: "Aromatherapy",
+            description: "Soothing and therapeutic for aromatherapy",
+            colors: ["#00695C", "#00897B", "#B2DFDB", "#FFFFFF"]
+        },
+        {
+            name: "Beauty Academy",
+            description: "Professional and educational for training",
+            colors: ["#0097A7", "#00ACC1", "#B2EBF2", "#FFFFFF"]
+        }
+    ],
+    'Events': [
+        {
+            name: "Corporate Summit",
+            description: "Professional and polished for business events",
+            colors: ["#1A237E", "#283593", "#C5CAE9", "#FFFFFF"]
+        },
+        {
+            name: "Birthday Bash",
+            description: "Fun and festive for birthday celebrations",
+            colors: ["#6A1B9A", "#8E24AA", "#E1BEE7", "#FFFFFF"]
+        },
+        {
+            name: "Conference Pro",
+            description: "Clean and focused for professional conferences",
+            colors: ["#01579B", "#0277BD", "#B3E5FC", "#FFFFFF"]
+        },
+        {
+            name: "Gala Night",
+            description: "Elegant and sophisticated for formal galas",
+            colors: ["#311B92", "#4527A0", "#D1C4E9", "#FFFFFF"]
+        },
+        {
+            name: "Music Festival",
+            description: "Vibrant and energetic for music events",
+            colors: ["#B71C1C", "#D32F2F", "#FFCDD2", "#FFFFFF"]
+        },
+        {
+            name: "Tech Expo",
+            description: "Modern and innovative for tech exhibitions",
+            colors: ["#006064", "#0097A7", "#B2EBF2", "#FFFFFF"]
+        },
+        {
+            name: "Art Exhibition",
+            description: "Creative and inspiring for art shows",
+            colors: ["#4A148C", "#6A1B9A", "#E1BEE7", "#FFFFFF"]
+        },
+        {
+            name: "Food Festival",
+            description: "Appetizing and warm for culinary events",
+            colors: ["#E65100", "#F57C00", "#FFE0B2", "#FFFFFF"]
+        },
+        {
+            name: "Sports Event",
+            description: "Dynamic and energetic for sporting events",
+            colors: ["#1B5E20", "#2E7D32", "#C8E6C9", "#FFFFFF"]
+        },
+        {
+            name: "Fashion Show",
+            description: "Chic and glamorous for fashion events",
+            colors: ["#880E4F", "#AD1457", "#F8BBD0", "#FFFFFF"]
+        },
+        {
+            name: "Charity Gala",
+            description: "Impactful and professional for fundraisers",
+            colors: ["#004D40", "#00695C", "#B2DFDB", "#FFFFFF"]
+        },
+        {
+            name: "Educational Summit",
+            description: "Focused and engaging for educational events",
+            colors: ["#0D47A1", "#1565C0", "#BBDEFB", "#FFFFFF"]
+        },
+        {
+            name: "Product Launch",
+            description: "Bold and innovative for launch events",
+            colors: ["#263238", "#37474F", "#CFD8DC", "#FFFFFF"]
+        },
+        {
+            name: "Cultural Festival",
+            description: "Rich and diverse for cultural celebrations",
+            colors: ["#BF360C", "#D84315", "#FFCCBC", "#FFFFFF"]
+        },
+        {
+            name: "Holiday Party",
+            description: "Festive and joyful for holiday celebrations",
+            colors: ["#1B5E20", "#2E7D32", "#C8E6C9", "#FFFFFF"]
+        }
     ]
 };
 
-// Export the niches and colorSchemes
+// Make variables available globally
 window.niches = niches;
 window.colorSchemes = colorSchemes;
