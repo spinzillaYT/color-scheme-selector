@@ -21,15 +21,19 @@ function scrollToSection(sectionId) {
 }
 
 // Menu toggle function
-function toggleMenu() {
+function toggleMenu(e) {
+    if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+    
     const hamburger = document.querySelector('.hamburger-btn');
     const mobileMenu = document.querySelector('.mobile-menu');
-    
+    const body = document.body;
+
     hamburger.classList.toggle('active');
     mobileMenu.classList.toggle('active');
-    
-    // Prevent scrolling when menu is open
-    document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+    body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -38,6 +42,63 @@ document.addEventListener('DOMContentLoaded', () => {
     const colorSwatches = document.getElementById('colorSwatches');
     const findColorBtn = document.querySelector('.find-color-btn');
     const nicheSection = document.querySelector('.niche-selector');
+
+    // Menu functionality
+    const hamburger = document.querySelector('.hamburger-btn');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const body = document.body;
+
+    function toggleMenu(e) {
+        if (e) {
+            e.preventDefault();
+        }
+        
+        hamburger.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+        body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+    }
+
+    function closeMenu() {
+        hamburger.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        body.style.overflow = '';
+    }
+
+    // Add click event to hamburger button
+    if (hamburger && mobileMenu) {
+        hamburger.addEventListener('click', toggleMenu);
+
+        // Close menu when clicking on mobile nav links
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                // Handle section scrolling
+                const section = link.getAttribute('data-section');
+                if (section) {
+                    closeMenu();
+                    setTimeout(() => {
+                        scrollToSection(section);
+                    }, 300); // Wait for menu close animation
+                } else {
+                    closeMenu();
+                    if (link.getAttribute('href') === '#') {
+                        scrollToTop();
+                    }
+                }
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (mobileMenu.classList.contains('active') && 
+                !mobileMenu.contains(e.target) && 
+                !hamburger.contains(e.target)) {
+                closeMenu();
+            }
+        });
+    }
 
     // Add smooth scroll for Find My Color button
     if (findColorBtn && nicheSection) {
@@ -179,20 +240,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 2000);
         }, 100);
     }
-
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-        const mobileMenu = document.querySelector('.mobile-menu');
-        const hamburger = document.querySelector('.hamburger-btn');
-        
-        if (mobileMenu.classList.contains('active') && 
-            !e.target.closest('.mobile-menu') && 
-            !e.target.closest('.hamburger-btn')) {
-            mobileMenu.classList.remove('active');
-            hamburger.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-    });
 
     // FAQ Functionality
     const faqItems = document.querySelectorAll('.faq-item');
