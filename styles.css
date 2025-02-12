@@ -364,6 +364,8 @@ header p {
     gap: 0.75rem;
     width: 100%;
     height: 70px;
+    text-decoration: none !important;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .niche-icon {
@@ -376,6 +378,18 @@ header p {
 .niche-text {
     font-size: 1rem;
     text-align: left;
+    color: var(--text-color) !important;
+}
+
+@media (max-width: 768px) {
+    .niche-button, .niche-text {
+        color: var(--text-color) !important;
+        -webkit-text-fill-color: var(--text-color);
+    }
+    
+    .niche-button:active {
+        color: var(--text-color) !important;
+    }
 }
 
 .niche-button:hover {
