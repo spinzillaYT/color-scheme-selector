@@ -186,7 +186,7 @@ body {
 
 /* Mobile Menu */
 .mobile-menu {
-    display: none;
+    display: none;  /* Hide by default */
     position: fixed;
     top: 0;
     right: -100%;
@@ -237,14 +237,19 @@ body {
         display: block;
     }
 
+    .nav-links {
+        display: none;  /* Hide desktop nav on mobile */
+    }
+    
     .mobile-menu {
-        display: block;
+        display: none;  /* Still hidden by default, will be shown by JavaScript */
     }
 }
 
 .nav-links {
     display: flex;
     gap: 2rem;
+    align-items: center;
 }
 
 .nav-links a {
