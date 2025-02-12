@@ -11,7 +11,8 @@ function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
     if (section) {
         const navbarHeight = document.querySelector('.navbar').offsetHeight;
-        const targetPosition = section.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+        const extraOffset = 32; // Additional pixels of spacing
+        const targetPosition = section.getBoundingClientRect().top + window.pageYOffset - navbarHeight - extraOffset;
         
         window.scrollTo({
             top: targetPosition,
@@ -103,8 +104,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add smooth scroll for Find My Color button
     if (findColorBtn && nicheSection) {
         findColorBtn.addEventListener('click', () => {
-            const yOffset = -50; // Offset to account for any fixed headers
-            const y = nicheSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            const navbarHeight = document.querySelector('.navbar').offsetHeight;
+            const extraOffset = 32; // Additional pixels of spacing
+            const y = nicheSection.getBoundingClientRect().top + window.pageYOffset - navbarHeight - extraOffset;
             
             window.scrollTo({
                 top: y,
@@ -142,9 +144,14 @@ document.addEventListener('DOMContentLoaded', () => {
             selectNiche(niche.name);
             
             // Smooth scroll to color schemes
-            colorScheme.scrollIntoView({ 
-                behavior: 'smooth',
-                block: 'start'
+            const colorSchemeSection = document.getElementById('colorScheme');
+            const navbarHeight = document.querySelector('.navbar').offsetHeight;
+            const extraOffset = 32; // Additional pixels of spacing
+            const targetPosition = colorSchemeSection.getBoundingClientRect().top + window.pageYOffset - navbarHeight - extraOffset;
+            
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
             });
         });
         
@@ -152,30 +159,40 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function selectNiche(nicheName) {
-        // Get color schemes
-        const schemes = colorSchemes[nicheName] || [];
-
-        // Show color scheme section
-        colorScheme.classList.add('visible');
+        const colorSchemeSection = document.getElementById('colorScheme');
+        const colorSwatches = document.getElementById('colorSwatches');
         
-        // Update section title
-        const title = document.createElement('h2');
-        title.textContent = `Color Schemes for ${nicheName}`;
-
-        // Create schemes container
-        const schemesContainer = document.createElement('div');
-        schemesContainer.className = 'color-schemes-grid';
-
-        // Create color schemes
+        // Update the section title
+        const sectionTitle = colorSchemeSection.querySelector('h2');
+        sectionTitle.textContent = `Color Schemes for ${nicheName}`;
+        
+        // Clear existing swatches
+        colorSwatches.innerHTML = '';
+        
+        // Get color schemes for the selected niche
+        const schemes = colorSchemes[nicheName];
+        
+        // Create and append new scheme elements
         schemes.forEach(scheme => {
             const schemeElement = createSchemeElement(scheme);
-            schemesContainer.appendChild(schemeElement);
+            colorSwatches.appendChild(schemeElement);
         });
-
-        // Clear previous content and add new
-        colorScheme.innerHTML = '';
-        colorScheme.appendChild(title);
-        colorScheme.appendChild(schemesContainer);
+        
+        // Scroll to color scheme section
+        const navbarHeight = document.querySelector('.navbar').offsetHeight;
+        const extraOffset = 32; // Additional pixels of spacing
+        const targetPosition = colorSchemeSection.getBoundingClientRect().top + window.pageYOffset - navbarHeight - extraOffset;
+        
+        window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+        });
+        
+        // Show the section
+        colorSchemeSection.style.display = 'block';
+        setTimeout(() => {
+            colorSchemeSection.style.opacity = '1';
+        }, 100);
     }
 
     function createSchemeElement(scheme) {
