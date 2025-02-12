@@ -5,6 +5,14 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Power Grotesk Neue';
+    src: url('fonts/NeuePower-Ultra.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -20,6 +28,11 @@ html {
     --grid-color: rgba(234, 234, 234, 0.6);
     --feature-text: #6B7280;
     --emoji-font: 'Noto Color Emoji', Apple Color Emoji, Segoe UI Emoji, sans-serif;
+    --primary-color: #1a1a1a;
+    --secondary-color: #4a4a4a;
+    --background-color: #ffffff;
+    --heading-font: 'Power Grotesk Neue', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --body-font: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 * {
@@ -29,7 +42,7 @@ html {
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--body-font);
     background-color: var(--primary-bg);
     color: var(--text-color);
     line-height: 1.6;
@@ -142,7 +155,7 @@ body {
 }
 
 .hero-section h1 {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--heading-font);
     font-size: 4.5rem;
     line-height: 1.1;
     font-weight: 700;
@@ -321,7 +334,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Neue Power', sans-serif;
+    font-family: var(--heading-font);
 }
 
 header {
@@ -354,7 +367,7 @@ header p {
     border: 2px solid transparent;
     padding: 1.25rem;
     border-radius: var(--border-radius);
-    font-family: 'Inter', sans-serif;
+    font-family: var(--body-font);
     font-weight: 500;
     cursor: pointer;
     transition: var(--transition);
@@ -472,7 +485,7 @@ header p {
 }
 
 .pair-name {
-    font-family: 'Neue Power', sans-serif;
+    font-family: var(--heading-font);
     font-size: 1.2rem;
     margin-bottom: 1rem;
     text-align: center;
@@ -504,7 +517,7 @@ header p {
 }
 
 .color-info h3 {
-    font-family: 'Neue Power', sans-serif;
+    font-family: var(--heading-font);
     margin-bottom: 0.5rem;
     font-size: 1rem;
 }
