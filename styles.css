@@ -1,17 +1,17 @@
 @font-face {
     font-family: 'Neue Power';
-    src: url('fonts/NeuePower-Regular.woff2') format('woff2');
+    src: url('/fonts/NeuePower-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Power Grotesk Neue';
-    src: url('../public/fonts/NeuePower-Ultra.woff2') format('woff2'),
-         url('../public/fonts/NeuePower-Ultra.ttf') format('truetype');
+    src: url('/fonts/NeuePower-Ultra.woff2') format('woff2'),
+         url('/fonts/NeuePower-Ultra.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-    font-display: block;
+    font-display: swap;
 }
 
 html {
