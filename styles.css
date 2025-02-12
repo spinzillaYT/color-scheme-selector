@@ -7,8 +7,7 @@
 
 @font-face {
     font-family: 'Power Grotesk Neue';
-    src: url('/fonts/NeuePower-Ultra.woff2') format('woff2'),
-         url('/fonts/NeuePower-Ultra.ttf') format('truetype');
+    src: url('/fonts/NeuePower-Ultra.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
